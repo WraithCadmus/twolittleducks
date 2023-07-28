@@ -1,0 +1,26 @@
+space_size: 200
+stroke_width: 10
+margin: 15
+
+sets:
+  uscsb:
+    description: United States Chemical Safety Board Investigation Videos
+    background_color: [218, 160, 109] # Buff, for official manilla
+    text_color: [0,0,0]
+    line_color: [0,0,0]
+    size: [3,3]
+    free_space: uscsb.png
+    items:
+      - Presssure Vessel
+      - Previous Warnings Ignored
+      - Stuck Valves
+      - Recent Change In Ownership
+      - Polymers
+      - Fatality
+      - "> 10 Injuries"
+      - Evacuation of Homes
+      - Hydroflouric Acid
+      - Containment Inadequate
+      - "Startup/Shutdown"
+      - Public Holiday
+      - Bankruptcy

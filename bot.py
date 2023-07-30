@@ -58,7 +58,7 @@ async def bingo(ctx, arg='help'):
             reply.append(f'- `{game}`: {config["sets"][game]["description"]}')
             await ctx.reply('\n'.join(reply), mention_author=True)
     elif arg == 'help':
-        await ctx.reply('Usage: Type `!bingo game` to play a specific game, `!bingo list` to list games, or `"bingo help` for this message')
+        await ctx.reply('Usage: Type `!bingo game` to play a specific game, `!bingo list` to list games, or `!bingo help` for this message')
     else:
         try:
             game = config['sets'][arg]

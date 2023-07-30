@@ -32,18 +32,14 @@ my_logger.info(f'Available games: {", ".join(config["sets"].keys())}')
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = discord.Client(intents=intents)
+bot = discord.ext.commands.Bot(command_prefix='!', intents=intents)
 
-@client.event
+@bot.event
 async def on_ready():
-    discord_logger.info(f'We have logged in as {client.user}')
+    discord_logger.info(f'We have logged in as {bot.user}')
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+@bot.command()
+async def bingo(ctx):
+    await ctx.reply('Let\'s play Bingo!', mention_author=True)
 
-    if message.content.startswith('!bingo'):
-        await message.reply('Let\'s play Bingo!', mention_author=True)
-
-client.run(os.environ['DISCORD_TOKEN'], log_handler=None)
+bot.run(os.environ['DISCORD_TOKEN'], log_handler=None)
